@@ -10,7 +10,7 @@ const OAUTH_CONFIG = {
   codeChallengeMethod: 'S256',
 };
 // Set this to your deployed GCash simulator URL
-window.GCASH_SIMULATOR_URL = 'https://gcash-simulator.onrender.com/';
+window.GCASH_SIMULATOR_URL = 'https://gcash-simulator1.onrender.com';
 
 function getServerUrl() {
   // Use the same host but port 3000 for the GCash simulator
