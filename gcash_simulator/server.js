@@ -16,7 +16,7 @@ const app = express();
 const PORT = 3000;
 
 // ─── Middleware ──────────────────────────────────────────────────────────────
-app.use(cors({ origin: '*', exposedHeaders: ['X-JWS-Signature', 'X-API-Standard', 'X-TLS-Version', 'X-Data-Classification', 'X-Consent-Scope', 'Content-Type', 'Cache-Control', 'Strict-Transport-Security', 'X-Content-Type-Options', 'X-Frame-Options'] }));
+app.use(cors({ origin: true, credentials: true, exposedHeaders: ['X-JWS-Signature', 'X-API-Standard', 'X-TLS-Version', 'X-Data-Classification', 'X-Consent-Scope', 'Content-Type', 'Cache-Control', 'Strict-Transport-Security', 'X-Content-Type-Options', 'X-Frame-Options'] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
