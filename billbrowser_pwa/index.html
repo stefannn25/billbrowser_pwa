@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0c0117" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="BillBrowser" />
+  <meta name="description" content="BillBrowser — AISP Open Finance Prototype with OAuth 2.0 + JWS (BSP Circular 1122)" />
+
+  <title>BillBrowser — AISP Open Finance</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+  <!-- App Shell -->
+  <div id="app">
+    <main id="page-content"></main>
+
+    <!-- Bottom Navigation -->
+    <nav id="bottom-nav" class="bottom-nav">
+      <button class="nav-item active" data-route="/">
+        <span class="material-icons-round">dashboard</span>
+        <span class="nav-label">Dashboard</span>
+      </button>
+      <button class="nav-item" data-route="/wallets">
+        <span class="material-icons-round">account_balance_wallet</span>
+        <span class="nav-label">Wallets</span>
+      </button>
+      <button class="nav-item" data-route="/subscriptions">
+        <span class="material-icons-round">receipt_long</span>
+        <span class="nav-label">Subscriptions</span>
+      </button>
+      <button class="nav-item" data-route="/audit">
+        <span class="material-icons-round">terminal</span>
+        <span class="nav-label">Audit</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal-content" class="modal-content"></div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts (ES Modules) -->
+  <script>
+    // Force unregister old service workers to clear cache
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for(let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script>
+  <script src="/js/audit.js?v=3"></script>
+  <script src="/js/state.js?v=3"></script>
+  <script src="/js/oauth.js?v=3"></script>
+  <script src="/js/api.js?v=3"></script>
+  <script src="/js/app.js?v=3"></script>
+</body>
+</html>

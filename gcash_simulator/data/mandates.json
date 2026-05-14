@@ -1,0 +1,68 @@
+[
+  {
+    "mandateId": "MNDT-PH-2026-00001",
+    "creditor": {
+      "name": "Netflix Philippines",
+      "id": "CRD-NF-001",
+      "scheme": "PH.OF.CRD"
+    },
+    "debtor": {
+      "name": "Juan Dela Cruz",
+      "id": "DBT-JDC-001",
+      "account": "0917***4567"
+    },
+    "amount": {
+      "value": 549.00,
+      "currency": "PHP"
+    },
+    "frequency": "MNTH",
+    "nextDeductionDate": "2026-06-01",
+    "status": "ACTV",
+    "createdDate": "2025-01-15",
+    "mandateType": "SUBSCRIPTION"
+  },
+  {
+    "mandateId": "MNDT-PH-2026-00002",
+    "creditor": {
+      "name": "Spotify Premium",
+      "id": "CRD-SP-002",
+      "scheme": "PH.OF.CRD"
+    },
+    "debtor": {
+      "name": "Juan Dela Cruz",
+      "id": "DBT-JDC-001",
+      "account": "0917***4567"
+    },
+    "amount": {
+      "value": 194.00,
+      "currency": "PHP"
+    },
+    "frequency": "MNTH",
+    "nextDeductionDate": "2026-05-28",
+    "status": "ACTV",
+    "createdDate": "2024-11-03",
+    "mandateType": "SUBSCRIPTION"
+  },
+  {
+    "mandateId": "MNDT-PH-2026-00003",
+    "creditor": {
+      "name": "Meralco",
+      "id": "CRD-MR-003",
+      "scheme": "PH.OF.CRD"
+    },
+    "debtor": {
+      "name": "Juan Dela Cruz",
+      "id": "DBT-JDC-001",
+      "account": "0917***4567"
+    },
+    "amount": {
+      "value": 3850.75,
+      "currency": "PHP"
+    },
+    "frequency": "MNTH",
+    "nextDeductionDate": "2026-05-25",
+    "status": "ACTV",
+    "createdDate": "2025-03-20",
+    "mandateType": "UTILITY"
+  }
+]
